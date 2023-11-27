@@ -25,7 +25,8 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            
+            <%= format_price(cart_subtotal_cents / 100.0)%>
           </th>
         </tr>
       </tfoot>

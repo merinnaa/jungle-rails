@@ -8,7 +8,8 @@
     <p><%= product.description %></p>
   </td>
   <td>
-    <%= product.price %>
+    
+    <%= format_price(product.price)%>
   </td>
   <td>
     <div>
@@ -18,6 +19,7 @@
     </div>
   </td>
   <td>
-    <%= product.price * quantity %>
+   
+    <%= format_price(product.price * quantity)%>
   </td>
 </tr>
