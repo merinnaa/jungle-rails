@@ -5,6 +5,12 @@
   </header>
 
   <div class="panel panel-default items">
+  <% if enhanced_cart.empty? %>
+  <div class="alert alert-info">
+  your Jungle cart is currently empty.
+  <% link_to "Go to home", root_path %>
+  </div>
+  <% else %>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -49,5 +55,5 @@
       <% end %>
     </div>
   </div>
-
+<% end %>
 </section>
