@@ -1,5 +1,6 @@
 class Admin::ProductsController < ApplicationController
 
+  before_action :basic_auth
   def index
     @products = Product.order(id: :desc).all
   end
@@ -36,5 +37,7 @@ class Admin::ProductsController < ApplicationController
       :price
     )
   end
+
+ 
 
 end
