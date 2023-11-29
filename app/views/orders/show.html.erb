@@ -8,6 +8,17 @@
     <h4>Thank you for your order!</h4>
   </div>
 
+  <h3>Order Details:</h3>
+  <div class="line-items">
+    <% @order.line_items.each do |line_item| %>
+      <%= render partial: 'line_item', locals: { line_item: line_item } %>
+    <% end %>
+  </div>
+
+
+  <p><strong>Final Amount:</strong> $<%= @order.total %></p>
+  <p><strong>Email:</strong> <%= @order.email %></p>
+
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
